@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-#IMPORTANT--Make sure gmail settings access to 'less-secure apps' is allowed
-#IMPORTANT--Make sure that the fromaddr email is added as trusted address in amazon kindle settings
+#IMPORTANT--Make sure your gmail settings' access to 'less-secure apps' is allowed
+#IMPORTANT--Make sure that the email you use here is added as trusted address in amazon kindle settings
 
 import os,sys,pdfkit,requests,re
 import smtplib
