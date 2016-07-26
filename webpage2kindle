@@ -1,0 +1,61 @@
+#!/usr/bin/python
+
+#IMPORTANT--Make sure gmail settings access to 'less-secure apps' is allowed
+#IMPORTANT--Make sure that the fromaddr email is added as trusted address in amazon kindle settings
+
+import os,sys,pdfkit,requests,re
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+from email.MIMEBase import MIMEBase
+from email import encoders
+
+res=requests.get(sys.argv[1])
+res.raise_for_status()         #Validating url
+reobj=re.compile('.pdf$')
+if reobj.search(sys.argv[1]):   		#Direct Link to a pdf file
+	with open(sys.argv[2],'wb') as f:
+		f.write(res.content)
+	f.close()
+else:
+	pdfkit.from_url(sys.argv[1],sys.argv[2]) #URL to pdf
+	
+#Sending email to kindle email
+
+
+fromaddr = "YOUR_GMAIL_ADDRESS"
+toaddr = "YOUR_KINDLE_EMAIL_ADDRESS"
+
+print 'Adding webpage to kindle.../' 
+
+msg = MIMEMultipart()
+ 
+msg['From'] = fromaddr
+msg['To'] = toaddr
+msg['Subject'] = "Kindle Document by Webpage2Kindle"
+ 
+body = "The document will be added to kindle Documents folder"
+ 
+msg.attach(MIMEText(body, 'plain'))
+ 
+filename = sys.argv[2]
+attachment = open(filename, "rb")
+ 
+part = MIMEBase('application', 'octet-stream')
+part.set_payload((attachment).read())
+encoders.encode_base64(part)
+part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+ 
+msg.attach(part)
+
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login(fromaddr, "YOUR_GMAIL_PASSWORD")
+text = msg.as_string()
+server.sendmail(fromaddr, toaddr, text)
+server.quit()
+
+os.remove(filename)
+
+print 'Webpage added to Kindle Documents.'
+
