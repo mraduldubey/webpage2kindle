@@ -24,6 +24,7 @@ Send Webpages to your Kindle directly by one command.
 
 # Usage :
 <ul>
+<li>Download the script and change to that directory Or Copy it to home dirextory for easy use</li>
 <li>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
 <b>OR</b>
 <li> python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
