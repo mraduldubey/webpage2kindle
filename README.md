@@ -19,7 +19,6 @@ Send Webpages to your Kindle directly by one command.
 
 <li>Line 27: toaddr = "YOUR_KINDLE_EMAIL_ADDRESS" => Change "YOUR_KINDLE_EMAIL_ADDRESS" to your kindle email (DON'T REMOVE QUOTES)</li>
 
-<li>Line 53: server.login(fromaddr, "YOUR_GMAIL_PASSWORD") => "YOUR_GMAIL_PASSWORD" to your gmail password</li>
 </ul>
 
 # Usage :
@@ -28,4 +27,8 @@ Send Webpages to your Kindle directly by one command.
 <li>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
 <b>OR</b>
 <li> python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
+<li> You will be prompted to enter your gmail password. Don't worry it will not be saved on the disk.</li>
 </ul>
+
+<b>Eg:</b>
+./webpage2kindle 'https://indiegroundfilms.files.wordpress.com/2014/01/before-sunrise-numbered.pdf' 'Before Sunrise'
