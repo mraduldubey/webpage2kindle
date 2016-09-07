@@ -26,6 +26,9 @@ else:
 fromaddr = "YOUR_GMAIL_ADDRESS"
 toaddr = "YOUR_KINDLE_EMAIL_ADDRESS"
 
+print "Enter your password for account:", fromaddr, "(Will not be saved)"
+password=raw_input()
+
 print 'Adding webpage to kindle.../' 
 
 msg = MIMEMultipart()
@@ -50,7 +53,7 @@ msg.attach(part)
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login(fromaddr, "YOUR_GMAIL_PASSWORD")
+server.login(fromaddr, password)
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
