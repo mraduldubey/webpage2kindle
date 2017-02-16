@@ -8,8 +8,8 @@ Send Webpages to your Kindle directly by one command.
   <b>1.requests</b> 
   <b>2.pdfkit</b>
 </li>
-<li>A gmail account through which document is added it kindle</li>
-<li>The kindle email address</li>
+<li>A gmail account through which document is added to kindle</li>
+<li>The kindle email address provided by Amazon</li>
 <li>Permission to send documents via the gmail account in the Amazon Kindle settings</li>
 </ul>
 
@@ -23,10 +23,10 @@ Send Webpages to your Kindle directly by one command.
 
 # Usage :
 <ul>
-<li>Download the script and change to that directory Or Copy it to home dirextory for easy use</li>
-<li>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
+<li>Download the script and change to that directory Or Copy it to home directory for easy use</li>
+<li><b>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
 <b>OR</b>
-<li> python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</li>
+<li> <b>python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
 <li> You will be prompted to enter your gmail password. Don't worry it will not be saved on the disk.</li>
 </ul>
 
