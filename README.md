@@ -1,24 +1,26 @@
-# webpage2kindle
+#webpage2kindle
 Send Webpages to your Kindle directly by one command.
 
 #Pre-requisites:
 <ul>
-<li>Python2.7 installed on the system</li>
-<li>Following Python modules installed (using pip): 
+
+<li>Python2.7</li>
+<li>Following Python modules: 
   <b>1.requests</b> 
   <b>2.pdfkit</b>
 </li>
-<li>A gmail account through which document is added to kindle</li>
-<li>The kindle email address provided by Amazon</li>
-<li>Permission to send documents via the gmail account in the Amazon Kindle settings</li>
+
+<li>A gmail account through which document is added to kindle.</li>
+<li>The kindle email address provided by Amazon.</li>
+<li>Permission to send documents via the gmail account in the Amazon Kindle settings.</li>
+<li> Access to "less secure apps" in your Gmail settings. </li>
+
 </ul>
 
 <h1>To USE the script make following <b>THREE</b> changes to the script:</h1>
 <ul>
-<li>Line 26: fromaddr = "YOUR_GMAIL_ADDRESS" => Change "YOUR_GMAIL_ADDRESS" to your gmail address (DO NOT REMOVE THE QUOTES)</li>
-
-<li>Line 27: toaddr = "YOUR_KINDLE_EMAIL_ADDRESS" => Change "YOUR_KINDLE_EMAIL_ADDRESS" to your kindle email (DON'T REMOVE QUOTES)</li>
-
+<li> Line 96: from_address = "YOUR GMAIL ADDRESS." Change "YOUR GMAIL ADDRESS." to your gmail address (Don't Remove Quotes).</li>
+<li> Line 99: to_address = "YOUR KINDLE EMAIL ADDRESS." to your Kindle email (Do Not Remove Quotes). </li>
 </ul>
 
 # Usage :
