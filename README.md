@@ -29,7 +29,7 @@ Send Webpages to your Kindle directly by one command.
 <li><b>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
 <b>OR</b>
 <li> <b>python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
-<li> You will be prompted to enter your gmail password. Don't worry it will not be saved on the disk.</li>
+<li> You will be prompted to enter your gmail password. The script has been updated to avoid 'over the shoulder' attack. Don't worry it will not be saved on the disk.</li>
 </ul>
 
 <b>Eg:</b>

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import os,sys,pdfkit,requests,re
+import getpass
 import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
@@ -38,7 +39,7 @@ def email_to_kindle( URL, filename, from_address, to_address ):
 
 	#Do not want to configure password in a unencrypted file.
 	print "Enter your password for account:", from_address, " (Will not be saved)"
-	password = raw_input()
+	password = getpass.getpass()
 
 	print 'Adding webpage to kindle...'
 
@@ -96,7 +97,7 @@ if __name__ == '__main__':
 	from_address = "YOUR GMAIL ADDRESS."
 
 	#The Kindle email.
-	to_address = "YOUR KINDLE EMAIL ADDRESS."
+	to_address = "YOUR KINDLE EMAIL"
 
 	pdfobj = re.compile('.pdf$')
 
