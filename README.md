@@ -8,7 +8,7 @@ Send Webpages to your Kindle directly by one command. Currently working on the b
   <b>1.requests</b> 
   <b>2.pdfkit</b>
 </li>
-<ul>
+</ul>
 
 ## Settings Pre-Requisites:
 <ul>
