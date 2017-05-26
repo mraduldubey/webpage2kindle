@@ -18,7 +18,7 @@ Send Webpages to your Kindle directly by one command. Currently working on the b
 <li> Access to "less secure apps" in your Gmail settings. </li>
 </ul>
 
-## Make following changes to the script [webpage2kindle.py](wepage2kindle.py?raw=true "webpage2kindle.py")
+## Make following changes to the script [webpage2kindle.py](webpage2kindle.py?raw=true "webpage2kindle.py")
 <ul>
 <li> Line 96: from_address = "YOUR GMAIL ADDRESS." Change "YOUR GMAIL ADDRESS." to your gmail address (Don't Remove Quotes).</li>
 <li> Line 99: to_address = "YOUR KINDLE EMAIL ADDRESS." to your Kindle email (Do Not Remove Quotes). </li>
