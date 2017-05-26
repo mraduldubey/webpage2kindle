@@ -99,9 +99,9 @@ if __name__ == '__main__':
 	#The Kindle email.
 	to_address = "YOUR KINDLE EMAIL"
 
-	pdfobj = re.compile('.pdf$')
+	pdfobj = re.compile(r'.pdf$')
 
-	httpobj = re.compile('^http//:')
+	httpobj = re.compile(r'^http')
 
 	#Add '.pdf' to file at the end, if not supplied as cmd line arguments e.g. 'thefirstbook' to 'thefirstbook.pdf'
 	if not pdfobj.search(filename):
@@ -110,7 +110,6 @@ if __name__ == '__main__':
 
 	#Add connection adapter to the URL if not present in cmd line argument e.g. 'www.google.com' to 'http://www.google.com'.
 	if not httpobj.search( URL ):
-
 		URL = 'http://' + URL
 
 	URL_to_PDF( URL, filename, pdfobj )
