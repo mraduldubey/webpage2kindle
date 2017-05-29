@@ -16,6 +16,10 @@ sudo apt install python
   ```
   sudo pip install pdfkit
   ```
+  - pynotify
+  ```
+  sudo pip install pynotify
+  ```
 3. If pdfkit throws dependency error while running, install wkhtmltopdf:
 ```
 sudo apt install wkhtmltopdf
