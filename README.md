@@ -2,13 +2,24 @@
 Send Webpages to your Kindle directly by one command. Currently working on the browser-extention for the same on a seperate branch.
 
 ## Installation Pre-requisites:
-<ul>
-<li>Python2.7</li>
-<li>Following Python modules: 
-  <b>1.requests</b> 
-  <b>2.pdfkit</b>
-</li>
-</ul>
+
+1. Python2.7
+```
+sudo apt install python
+```
+2. Following Python modules: 
+  - requests
+  ```
+  sudo pip install requests
+  ```
+  - pdfkit
+  ```
+  sudo pip install pdfkit
+  ```
+3. If pdfkit throws dependency error while running, install wkhtmltopdf:
+```
+sudo apt install wkhtmltopdf
+```
 
 ## Settings Pre-Requisites:
 <ul>
