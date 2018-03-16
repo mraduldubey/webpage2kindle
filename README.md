@@ -1,76 +1,43 @@
 # webpage2kindle
-Send Webpages to your Kindle directly by one command. Currently working on the browser-extention for the same on a seperate branch.
+Send Webpages to your Kindle directly by one command.
+## 1 Step Setup
+Dowload this repo. Go to the downloaded directory and run:
+
+` sudo ./install.sh `
+
+![Installation](working.png?raw=true "Installation Screenshot")
+
+That's it. You are good to go. It will prompt you to give your Gmail and the Kindle email while Installation.
+
+**Tip :** If, however, **any mistake occurs during the email configuration part**, run this command: ` ./config.sh ` and you will be prompted to configure the emails again.
+
+**Do Your Homeowork :**
+Though you still need to "allow less secure apps" in Gmail settings and add this Gmail to trusted email in Kindle settings.
+
+## Usage
+One command without thinking about the repository you currently are in:
+
+` webpage2kindle http://www.link.xyz filename.pdf `
+
+![Command](sample.png?raw=true "Working Screenshot")
+
+
+#Technical details
 
 ## Installation Pre-requisites:
+Pre-requisites are being handled by the installer script. User need not explicitly install it.
+- python
+- pdfkit
+- requests
+- wkhtmltopdf
 
-1. Python2.7
-```
-sudo apt install python
-```
-2. Following Python modules: 
-  - requests
-  ```
-  sudo pip install requests
-  ```
-  - pdfkit
-  ```
-  sudo pip install pdfkit
-  ```
-  - pynotify
-  ```
-  sudo pip install pynotify
-  ```
-3. If pdfkit throws dependency error while running, install wkhtmltopdf:
-```
-sudo apt install wkhtmltopdf
-```
-
-## Settings Pre-Requisites:
+## Configuration Pre-Requisites:
 <ul>
 <li>A gmail account through which document is added to kindle.</li>
 <li>The kindle email address provided by Amazon.</li>
 <li>Permission to send documents via the gmail account in the Amazon Kindle settings.</li>
 <li> Access to "less secure apps" in your Gmail settings. </li>
 </ul>
-
-## Make following changes to the script [webpage2kindle.py](webpage2kindle.py?raw=true "webpage2kindle.py")
-<ul>
-<li> Line 96: from_address = "YOUR GMAIL ADDRESS." Change "YOUR GMAIL ADDRESS." to your gmail address (Don't Remove Quotes).</li>
-<li> Line 99: to_address = "YOUR KINDLE EMAIL ADDRESS." to your Kindle email (Do Not Remove Quotes). </li>
-</ul>
-
-<b> Example: </b>
-```
-from_address = "mraduldubeymd19@gmail.com"
-```
-```
-to_address = "mradul@kindle.com"
-```
-
-## Usage:
-<ul>
-<li>Download the script and change to that directory Or Copy it to home directory for easy use</li>
-<li><b>./webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
-<b>OR</b>
-<li> <b>python webpage2kindle 'The_URL_Goes_Here' 'Filename_With_which_You_Want_to_save_webpage_in_kindle'</b></li>
-<li> You will be prompted to enter your gmail password. The script has been updated to avoid 'over the shoulder' attack. Don't worry it will not be saved on the disk.</li>
-</ul>
-
-<b>Example:</b>
-```
-chmod +x wepage2kindle.py #Need to run only once.
-
-./webpage2kindle.py https://indiegroundfilms.files.wordpress.com/2014/01/before-sunrise-numbered.pdf Before Sunrise
-```
-<b>OR</b>
-
-```
-python webpage2kindle.py https://indiegroundfilms.files.wordpress.com/2014/01/before-sunrise-numbered.pdf Before Sunrise
-```
-
-## Screenshot
-![Screenshot](sample.png?raw=true "Working Screenshot")
-
 
 ## Authors
 
@@ -79,4 +46,3 @@ python webpage2kindle.py https://indiegroundfilms.files.wordpress.com/2014/01/be
 ## License
 
 This project is licensed under the GNU GENERAL PUBLIC LICENSE License - see the [LICENSE.md](LICENSE?raw=true "LICENSE") file for details.
-
