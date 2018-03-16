@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os,sys,pdfkit,requests,re
+import os,os.path,sys,pdfkit,requests,re
 import getpass
 import pynotify
 import smtplib
@@ -95,10 +95,10 @@ if __name__ == '__main__':
 	URL = sys.argv[1]
 
 	#The email added to trusted email in Kindle settings.
-	from_address = "YOUR GMAIL ADDRESS"
+	from_address = "YOUR_TRUSTED_GMAIL"
 
 	#The Kindle email.
-	to_address = "YOUR KINDLE EMAIL ADDRESS"
+	to_address = "YOUR_KINDLE_EMAIL"
 
 	pdfobj = re.compile(r'.pdf$')
 
@@ -118,6 +118,6 @@ if __name__ == '__main__':
 	if email_to_kindle( URL, filename, from_address, to_address ):
 		print "The document has been added to the kindle."
 		pynotify.init('mraduldubey')
-		notify = pynotify.Notification('webpage2kindle','The document has been added to the kindle.')
+		notify = pynotify.Notification('webpage2kindle','The document has been added to the kindle.',os.path.join(os.getcwd(),'kindle.png'))
 		notify.show()
 
